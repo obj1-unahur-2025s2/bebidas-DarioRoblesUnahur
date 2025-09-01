@@ -1,0 +1,21 @@
+import deportistas.*
+import bebidas.*
+
+describe "estudio de uso de sustancias" {
+  test "tito con cianuro" {
+    tito.consumir(100, cianuro)
+    assert.equals(0, tito.velocidad())
+  }
+  test "tito con whisky" {
+    tito.consumir(200, whisky)
+    assert.equals(0.9**200*tito.inercia(), tito.velocidad())
+  }
+  test "tito con 500 de terere" {
+    tito.consumir(500, terere)
+    assert.equals(50*490/tito.peso(), tito.velocidad())
+  }
+  test "tito con 5 de terere"{
+    tito.consumir(5, terere)
+    assert.equals(1*490/tito.peso(), tito.velocidad())
+  }   
+}
